@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Online clock</title>
+    <script src="\static\jquery-1.11.3.js"></script>
+	<script type="text/javascript" src='/static/default_page.js'></script>
+
+	<link rel="stylesheet" href="/static/style2.css">
+</head>
+
+
+<body onload='addOption()' id = 'body'>
+	<p id = "every" style="font:50px;">Every Morning Counts</p>
+
+
+	<table>
+		<tr>
+			<td id = "category_text">Category:</td>
+			<td><select id="category_list"></select></td>
+			<td id = "hour_text">Hour:</td>
+			<td><select id='hour_list'></select></td>
+			<td id = "minute_text">Minute:</td>
+			<td><select id='minute_list'></select></td>
+			<td><button id='am_pm' onclick='switch_am_pm()' class = "am_btn">AM</button></td>
+            <td rowspan="3"  style="padding-left: 250px">
+                <form name="timeForm">
+                    <input type=text" name="field" value="" style="background-color:pink;height: 60px;width:200px;font-size: 30px;text-align: center;" >
+                </form>
+            </td>
+		</tr>
+        <tr>
+            <td colspan="4" >
+                <form id = "description_text">
+	                Description:<input type = "text" id="description"><br>
+	            </form>
+            </td>
+
+        </tr>
+		<tr>
+			<td><button id = "add" onclick='setClock()' class = "add_btn">ADD</button></td>
+            <td><button id = "stop" onclick='stopClock()' class = "add_btn">STOP</button></td>
+		</tr>
+	</table>
+
+	<hr>
+	<table>
+		<tr id="button_row">
+			<td id = "select_text"> Select Category:</td>
+			<td><button id = "show" onclick='show_all_alarms()' class = "add_btn">Show All</button></td>
+		</tr>
+	</table>
+	<hr>
+	<table id='showClock'></table>
+
+
+
+
+</body>
+
+
+
+</html>
